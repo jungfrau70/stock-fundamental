@@ -1,0 +1,9 @@
+alembic
+beautifulsoup4
+fastapi
+lxml
+numpy
+pandas
+requests
+sqlalchemy
+uvicorn
