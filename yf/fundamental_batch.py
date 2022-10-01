@@ -1,8 +1,4 @@
-from fastapi import FastAPI
 
-from statistics import statistics
-
-app = FastAPI()
 
 @app.get("/ticker/{ticker_id}")
 async def get_ticker(ticker_id: str):

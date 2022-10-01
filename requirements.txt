@@ -1,3 +1,5 @@
+aiosqlite
+aiopg[sa]
 alembic
 beautifulsoup4
 fastapi
@@ -6,4 +8,4 @@ numpy
 pandas
 requests
 sqlalchemy
-uvicorn
+uvicorn[standard] 

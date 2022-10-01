@@ -1,21 +1,19 @@
-import uuid
-from .database import Base
-from sqlalchemy import Column, String, Integer, DateTime
 from datetime import datetime
-import uuid
+from operator import and_
+from typing import List, Optional
 
-from .models import Fundamental
+from sqlalchemy import update
+from sqlalchemy.future import select
+from sqlalchemy.orm import Session
+
+from db.models.fundamental import Fundamental
+
+from datetime import datetime
+
 import pandas as pd
 
 class db:
     
-    def __init__(self):
-        self.driver= '{SQL Server}'
-        self.server = ''
-        self.database = ''
-        self.schema = 'yahoo'
-        self.tableNameValuation = 'fundamentals'
-
     def prepareDf(self, df):
         df = pd.melt(df.reset_index(), id_vars = ['Ticker', 'Category'])
         return df
